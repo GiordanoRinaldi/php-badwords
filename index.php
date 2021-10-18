@@ -22,14 +22,16 @@ $censura= str_replace($parolacensurata, '***', $paragrafo);
     <title>Censurami</title>
 </head>
 <body>
-
     <h2>Paragrafo Originale</h2>
     <p><?php echo $paragrafo; ?></p>
     <h4>La frase contiene <?php echo strlen($paragrafo); ?> caratteri </h4>
 
     <hr>
-
     <h2>Paragrafo con Censura</h2>
+    <form method="get">
+        <input type="text" name="parola" placeholder="inserisci la parola da censurare">
+        <input type="submit">
+    </form>
     <p><?php echo $censura; ?></p>
     <h4>La frase ora contiene <?php echo strlen($censura); ?> caratteri </h4>
 
